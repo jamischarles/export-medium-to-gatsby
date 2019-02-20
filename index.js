@@ -14,7 +14,8 @@ var cli = meow(
 	  $ medium2gatsby <src_file_or_folder>
 
 	Options
-	  --output, -o Destination folder for output files.
+      --output, -o Destination folder for output files. Defaults to './'.
+      --template, -t Template used to generate post files. Defaults to 'medium-to-gatsby/templates/default.js'.
 	  --help, -h Shows usage instructions
 
 	Examples
@@ -26,6 +27,10 @@ var cli = meow(
       output: {
         type: 'string',
         alias: 'o',
+      },
+      template: {
+        type: 'string',
+        alias: 't',
       },
     },
   },
@@ -45,5 +50,6 @@ if (cli.input.length < 1) {
 
 var srcPath = cli.input[0];
 var destPath = cli.flags.output;
-converter.convert(srcPath, destPath);
+var templatePath = cli.flags.template;
+converter.convert(srcPath, destPath, templatePath);
 // foo(cli.input[0], cli.flags);

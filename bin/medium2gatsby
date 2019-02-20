@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+
+//executable CLI entry point into this util
+require('../index.js');

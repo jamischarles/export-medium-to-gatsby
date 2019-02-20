@@ -20,6 +20,7 @@ var cli = meow(
 
 	Examples
 	  $ medium2gatsby . -o posts
+      $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
 
 `,
   {

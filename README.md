@@ -21,6 +21,11 @@
     $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
 ```
 
+## Features
+- Customize output via templates
+- Handles embedded tweets
+- Inlines github gists 
+
 
 ## Customize via templates
 Based on which gatsby theme you're using you may need to generate differen

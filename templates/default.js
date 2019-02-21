@@ -4,7 +4,7 @@ module.exports = {
 
     var template = `\
 ---
-title: ${data.title}
+title: "${data.title}"
 date: ${data.published}
 template: "post"
 draft: false

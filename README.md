@@ -66,10 +66,10 @@ CSS should approximate the medium fenced link style:
 
 
 ## Customize via templates
-Based on which gatsby theme you're using you may need to generate differen
+Based on which gatsby theme you're using you may need to generate different
 frontmatter fields.
 
-Here is an example `template.js` you can pass to the CLI via the `-t` flag.
+Here are some example `template.js` you can save and pass to the CLI via the `-t` flag.
 
 ### Template ex1: Different folder for each post 
 - specifies `2018-04-16` date format in frontmatter `date` field

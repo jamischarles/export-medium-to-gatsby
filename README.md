@@ -109,8 +109,8 @@ ${data.body}
   },
   getOptions: function() {
     return {
-      folderForEachSlug: true, // separate folder for each blog post, where index.md and post image will live
-      imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
+      folderForEachSlug: true, // separate folder for each blog post, where index.md and post images will live
+      imagePath: '/images2', // <img src="/images2/[filename]" >. Used in the markdown files.
       defaultCodeBlockLanguage: 'js', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
     };
   },

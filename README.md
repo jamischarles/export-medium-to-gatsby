@@ -148,7 +148,7 @@ ${data.body}
       imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
       // This field is ignored when folderForEachSlug:true. Should be absolute. Location where medium images will be saved.
       imageFolder:
-        '/Users/jacharles/dev/blog/content/posts/introducing-the-react-testing-library/images', 
+        '/Users/jacharles/dev/blog/static/media', 
       defaultCodeBlockLanguage: '', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
     };
   },

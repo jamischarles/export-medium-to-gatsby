@@ -145,7 +145,7 @@ ${data.body}
   getOptions: function() {
     return {
       folderForEachSlug: false, // same folder for all posts
-      imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
+      imagePath: '/media', // <img src="/media/[filename]" >. Used in the markdown files.
       // This field is ignored when folderForEachSlug:true. Should be absolute. Location where medium images will be saved.
       imageFolder:
         '/Users/jacharles/dev/blog/static/media', 

@@ -26,6 +26,7 @@
 - Downloads post images from medium and saves locally
 - Handles embedded tweets
 - Inlines github gists 
+- Allows default language for code blocks. 
 
 
 ## Customize via templates

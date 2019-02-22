@@ -133,6 +133,7 @@ module.exports = {
 slug: ${data.titleForSlug}
 date: ${data.published}
 title: "${data.title}"
+template: "post"
 draft: false
 description: "${data.description}"
 category: ""

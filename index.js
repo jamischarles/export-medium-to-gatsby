@@ -15,11 +15,11 @@ var cli = meow(
 
 	Options
       --output, -o Destination folder for output files. Defaults to './'.
-      --template, -t Template used to generate post files. Defaults to 'medium-to-gatsby/templates/default.js'.
+      --template, -t Template used to generate post files.
 	  --help, -h Shows usage instructions
 
 	Examples
-	  $ medium2gatsby . -o posts
+	  $ medium2gatsby . -o posts -t template.js
       $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
 
 `,

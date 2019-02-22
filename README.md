@@ -5,19 +5,30 @@
 ## Installation 
 `$ npm install -g https://github.com/jamischarles/export-medium-to-gatsby` (maybe it'll go on npm eventually)
 
+## Steps
+1. [Download your medium posts as an archcive from medium](https://help.medium.com/hc/en-us/articles/115004745787-Download-your-information).
+2. Install this CLI via #Installation step above
+3. Save a template file (see template section below) where you'll be running
+   your export command.
+4. Customize the template.js file you downloaded to match the [frontmatter](https://jekyllrb.com/docs/front-matter/) fields your gatsby blog requires. Here you also define what folder in your blog medium images should be downloaded to.
+5. Run the CLI and either output it directly to your `content/posts` folder, or
+   copy it there after generating the files.
+6. Verify that the generated files are correct and looks good.
+7. Make any CSS and styling adjustments as needed.
+8. Do a happy dance.
 
-## Usage 
+## CLI Usage 
 ```
  Usage
     $ medium2gatsby <src_file_or_folder>
 
   Options
    --output, -o Destination folder for output files. Defaults to './'.
-   --template, -t Template used to generate post files. Defaults to 'medium-to-gatsby/templates/default.js'.
+   --template, -t Template used to generate post files.
    --help, -h Shows usage instructions
 
   Examples
-    $ medium2gatsby . -o posts
+    $ medium2gatsby . -o posts -t template.js
     $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
 ```
 
@@ -27,6 +38,30 @@
 - Handles embedded tweets
 - Inlines github gists 
 - Allows default language for code blocks. 
+
+## Recommended styling
+**Images and subtitles**
+Images and subtitles will been converted to
+`<figure><img><figcaption>Subtitle</figcaption>` same as medium used.
+
+Gatsby injects a `<p>` in there. To fix spacing I suggest you add the following to your template's
+CSS:`figure > p {margin-bottom:0px !important;}`.
+
+You can use `figure figcaption {}` to style image subtitles.
+
+** Fenced Links**
+If you used fenced links on medium to make links stand out, those links will now
+have show up as `<a href="some-link" class="fenced-link">some text</a>.` This
+CSS should approximate the medium fenced link style:
+```css
+.fenced-link {
+  background-color:#0000000d;
+  font-family:monospace;  
+  text-decoration:underline;
+  padding:2px;
+}
+```
+
 
 
 ## Customize via templates
@@ -74,3 +109,11 @@ ${data.body}
   },
 };
 ```
+
+## TODO and Help needed
+I'm about ready to move on from this, but would love help with the following if
+anybody feels inclined:
+- [ ] Adding tests (prefer something dead simple like mocha). Currently there
+    are zero tests.
+- [ ] More generator targets. This repo could fairly easily be forked and expanded to include other targets like jekyll, or
+    other static site generators. (low priority)

@@ -23,6 +23,7 @@
 
 ## Features
 - Customize output via templates
+- Downloads post images from medium and saves locally
 - Handles embedded tweets
 - Inlines github gists 
 

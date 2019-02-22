@@ -161,6 +161,7 @@ ${data.body}
 ## TODO and Help needed
 I'm about ready to move on from this, but would love help with the following if
 anybody feels inclined:
+- [ ] Error handling is very lacking in many places. Could / should be improved to be more robust especially around downloading posts / images from medium.
 - [ ] Adding tests (prefer something dead simple like mocha). Currently there
     are zero tests.
 - [ ] More generator targets. This repo could fairly easily be forked and expanded to include other targets like jekyll, or

@@ -136,7 +136,7 @@ title: "${data.title}"
 draft: false
 description: "${data.description}"
 categories: []
-keywords: [${data.tags.join(',')}]
+tags: [${data.tags.join(',')}]
 ---
 
 ${data.body}

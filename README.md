@@ -1,6 +1,14 @@
 # medium-to-gatsby
 
  A CLI to convert your medium exported .html files to gatsby .md files.
+ 
+ ## Features
+- Converts medium .html files and outputs gatsby .md files.
+- Customize output via templates
+- Downloads post images from medium and saves locally
+- Handles embedded tweets
+- Inlines github gists 
+- Allows default language for code blocks. 
 
 ## Installation 
 `$ npm install -g https://github.com/jamischarles/export-medium-to-gatsby` (maybe it'll go on npm eventually)
@@ -31,13 +39,6 @@
     $ medium2gatsby . -o posts -t template.js
     $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
 ```
-
-## Features
-- Customize output via templates
-- Downloads post images from medium and saves locally
-- Handles embedded tweets
-- Inlines github gists 
-- Allows default language for code blocks. 
 
 ## Recommended styling
 **Images and subtitles**

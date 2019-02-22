@@ -19,8 +19,7 @@
 3. Save a template file (see template section below) where you'll be running
    your export command.
 4. Customize the template.js file you downloaded to match the [frontmatter](https://jekyllrb.com/docs/front-matter/) fields your gatsby blog requires. Here you also define what folder in your blog medium images should be downloaded to.
-5. Run the CLI and either output it directly to your `content/posts` folder, or
-   copy it there after generating the files.
+5. Run the CLI and use the `medium-export/posts` folder as the input, and for output either directly output to your `content/posts` folder, or copy it there after generating the files.
 6. Verify that the generated files are correct and looks good.
 7. Make any CSS and styling adjustments as needed.
 8. Do a happy dance.
@@ -37,7 +36,8 @@
 
   Examples
     $ medium2gatsby . -o posts -t template.js
-    $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js
+    $ medium2gatsby 2018-04-02_Introducing-the-react-testing-library----e3a274307e65.html -o output -t template.js 
+    $ medium2gatsby ~/Downloads/medium-export/posts -o . -t template.js 
 ```
 
 ## Recommended styling

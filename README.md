@@ -112,8 +112,9 @@ ${data.body}
     return {
       folderForEachSlug: true, // separate folder for each blog post, where index.md and post image will live
       imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
+      // This field is ignored when folderForEachSlug:true. Should be absolute. Location where medium images will be saved.
       imageFolder:
-        '/Users/jacharles/dev_freelance/kentcdodds.com/content/blog/introducing-the-react-testing-library/images', // should be absolute. Location where medium images will be saved. This field is ignored when folderForEachSlug:true, because images will be stored in /[post-slug-folder]/[imagePath].
+        '/Users/jacharles/dev/blog/content/posts/introducing-the-react-testing-library/images', 
       defaultCodeBlockLanguage: 'js', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
     };
   },

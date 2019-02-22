@@ -135,7 +135,7 @@ date: ${data.published}
 title: "${data.title}"
 draft: false
 description: "${data.description}"
-categories: []
+category: ""
 tags: [${data.tags.join(',')}]
 ---
 

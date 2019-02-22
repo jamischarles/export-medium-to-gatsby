@@ -6,7 +6,7 @@
 `$ npm install -g https://github.com/jamischarles/export-medium-to-gatsby` (maybe it'll go on npm eventually)
 
 ## Steps
-1. [Download your medium posts as an archcive from medium](https://help.medium.com/hc/en-us/articles/115004745787-Download-your-information).
+1. [Download your medium posts as an archive from medium](https://help.medium.com/hc/en-us/articles/115004745787-Download-your-information).
 2. Install this CLI via #Installation step above
 3. Save a template file (see template section below) where you'll be running
    your export command.

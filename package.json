@@ -15,5 +15,8 @@
     "mkdirp": "^0.5.1",
     "request": "^2.88.0",
     "turndown": "^4.0.1"
+  },
+  bin: {
+    medium2gatsby: './bin/medium2gatsby'
   }
 }

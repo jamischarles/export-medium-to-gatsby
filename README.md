@@ -162,6 +162,7 @@ ${data.body}
 ## TODO and Help needed
 I'm about ready to move on from this, but would love help with the following if
 anybody feels inclined:
+- [ ] Better progress / error messages. Should notify which articles fail for whichever reason
 - [ ] Error handling is very lacking in many places. Could / should be improved to be more robust especially around downloading posts / images from medium.
 - [ ] Adding tests (prefer something dead simple like mocha). Currently there
     are zero tests.

@@ -71,11 +71,11 @@ frontmatter fields.
 
 Here is an example `template.js` you can pass to the CLI via the `-t` flag.
 
-This template 
+### Template ex1: Different folder for each post 
 - specifies `2018-04-16` date format in frontmatter `date` field
 - generates a separate folder for each post ie: `content/posts/introducing-react/index.md
-- saves post images to `content/posts/introducing-react/images2`
-- defauls all code fences to use `js`
+- saves post images to `/images2` (relative to the post folder)
+- defauls all code fences to use `'js'`
 
 ```js
 module.exports = {
@@ -90,9 +90,8 @@ module.exports = {
       date
         .getDate()
         .toString()
-        .padStart(2, 0);
-
-    //2018-04-16
+        .padStart(2, 0); //2018-04-16
+    
     var template = `\
 ---
 slug: ${data.titleForSlug}
@@ -112,10 +111,45 @@ ${data.body}
     return {
       folderForEachSlug: true, // separate folder for each blog post, where index.md and post image will live
       imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
+      defaultCodeBlockLanguage: 'js', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
+    };
+  },
+};
+
+```
+
+### Template ex2: Same folder for all posts
+- specifies `2018-04-16T14:48:00.000Z` date format (ISO, which is default) in frontmatter `date` field
+- saves all generated posts to same folder defined in `-o` options for CLI. Files are named via slug name from medium.
+- saves post images to `/Users/jacharles/dev/blog/content/posts/introducing-the-react-testing-library/images`
+- defauls all code fences to use `''` (no language).
+
+```js
+module.exports = {
+  render: function(data) {
+    var template = `\
+---
+slug: ${data.titleForSlug}
+date: ${data.published}
+title: ${data.title}
+description: "${data.description}"
+categories: []
+keywords: [${data.tags.join(',')}]
+---
+
+${data.body}
+`;
+
+    return template;
+  },
+  getOptions: function() {
+    return {
+      folderForEachSlug: false, // same folder for all posts
+      imagePath: '/images2', // <img src="/images/[filename]" >. Used in the markdown files.
       // This field is ignored when folderForEachSlug:true. Should be absolute. Location where medium images will be saved.
       imageFolder:
         '/Users/jacharles/dev/blog/content/posts/introducing-the-react-testing-library/images', 
-      defaultCodeBlockLanguage: 'js', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
+      defaultCodeBlockLanguage: '', // code fenced by default will be ``` with no lang. If most of your code blocks are in a specific lang, set this here.
     };
   },
 };

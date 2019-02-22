@@ -17,6 +17,6 @@
     "turndown": "^4.0.1"
   },
   bin: {
-    medium2gatsby: './bin/medium2gatsby'
+    medium2gatsby: "./bin/medium2gatsby"
   }
 }

@@ -96,7 +96,7 @@ module.exports = {
 ---
 slug: ${data.titleForSlug}
 date: ${prettyDate}
-title: ${data.title}
+title: "${data.title}"
 description: "${data.description}"
 categories: []
 keywords: [${data.tags.join(',')}]
@@ -131,7 +131,7 @@ module.exports = {
 ---
 slug: ${data.titleForSlug}
 date: ${data.published}
-title: ${data.title}
+title: "${data.title}"
 description: "${data.description}"
 categories: []
 keywords: [${data.tags.join(',')}]

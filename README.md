@@ -38,6 +38,8 @@
 - Handles embedded tweets
 - Inlines github gists 
 - Allows default language for code blocks. 
+- Skips over drafts and post replies.
+
 
 ## Recommended styling
 **Images and subtitles**

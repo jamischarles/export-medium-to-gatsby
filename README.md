@@ -9,6 +9,8 @@
 - Handles embedded tweets
 - Inlines github gists 
 - Allows default language for code blocks. 
+- Skips over drafts and post replies.
+- Generates report when done.
 
 ## Installation 
 `$ npm install -g https://github.com/jamischarles/export-medium-to-gatsby` (maybe it'll go on npm eventually)

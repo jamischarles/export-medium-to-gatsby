@@ -77,6 +77,7 @@ Here are some example `template.js` you can save and pass to the CLI via the `-t
 - specifies `2018-04-16` date format in frontmatter `date` field
 - generates a separate folder for each post ie: `content/posts/introducing-react/index.md
 - saves post images to `/images2` (relative to the post folder)
+- posts will show on site as `/posts/[slug-name]`
 - defauls all code fences to use `'js'`
 
 ```js
@@ -96,7 +97,7 @@ module.exports = {
     
     var template = `\
 ---
-slug: ${data.titleForSlug}
+slug: "/posts/${data.titleForSlug}/"
 date: ${prettyDate}
 title: "${data.title}"
 draft: false

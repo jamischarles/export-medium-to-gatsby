@@ -16,6 +16,7 @@ var cli = meow(
 	Options
       --output, -o Destination folder for output files. Defaults to './'.
       --template, -t Template used to generate post files.
+      --drafts, -d set flag to export drafts along with other posts. Default, false.
 	  --help, -h Shows usage instructions
 
 	Examples
@@ -25,6 +26,11 @@ var cli = meow(
 `,
   {
     flags: {
+      drafts: {
+        type: 'boolean',
+        alias: 'd',
+        default: false
+      },
       output: {
         type: 'string',
         alias: 'o',
@@ -52,5 +58,6 @@ if (cli.input.length < 1) {
 var srcPath = cli.input[0];
 var destPath = cli.flags.output;
 var templatePath = cli.flags.template;
-converter.convert(srcPath, destPath, templatePath);
+var export_drafts = cli.flags.drafts;
+converter.convert(srcPath, destPath, templatePath, export_drafts);
 // foo(cli.input[0], cli.flags);

@@ -170,4 +170,4 @@ anybody feels inclined:
 - [ ] Adding tests (prefer something dead simple like mocha). Currently there
     are zero tests.
 - [ ] More generator targets. This repo could fairly easily be forked and expanded to include other targets like jekyll, or
-    other static site generators. (low priority)
+    other static site generators. (low priority) (medium2markdown)
